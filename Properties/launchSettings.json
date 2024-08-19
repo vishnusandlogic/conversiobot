@@ -4,7 +4,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:3978",
+      "applicationUrl": "https://conversiobot.onrender.com",
       "sslPort": 0
     }
   },
@@ -19,7 +19,7 @@
     "$safeprojectname$": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:3979;http://localhost:3978",
+      "applicationUrl": "https://conversiobot.onrender.com;https://conversiobot.onrender.com",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
