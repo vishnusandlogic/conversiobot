@@ -1,4 +1,4 @@
-﻿// Generated with Bot Builder V4 SDK Template for Visual Studio EmptyBot v4.22.0
+// Generated with Bot Builder V4 SDK Template for Visual Studio EmptyBot v4.22.0
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,13 +30,15 @@ namespace ConversioBot
                 options.SerializerSettings.MaxDepth = HttpHelper.BotMessageSerializerSettings.MaxDepth;
             });
 
-            // Read the AppId and Password from appsettings.json
-            var appId = Configuration["MicrosoftAppId"];
-            var appPassword = Configuration["MicrosoftAppPassword"];
+            //// Read the AppId and Password from appsettings.json
+            //var appId = Configuration["MicrosoftAppId"];
+            //var appPassword = Configuration["MicrosoftAppPassword"];
 
-            // Create the Bot Framework Authentication
-            var credentials = new SimpleCredentialProvider(appId, appPassword);
-            services.AddSingleton<ICredentialProvider>(credentials);
+            //// Create the Bot Framework Authentication
+            //var credentials = new SimpleCredentialProvider(appId, appPassword);
+            //services.AddSingleton<ICredentialProvider>(credentials);
+
+            services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
 
             //// Create the Bot Framework Authentication to be used with the Bot Adapter.
             //services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
